@@ -1,0 +1,23 @@
+<h2 mat-dialog-title>Create Task</h2>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Title</mat-label>
+    <input matInput [(ngModel)]="title">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Due Date</mat-label>
+    <input matInput [(ngModel)]="duedate">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Status</mat-label>
+    <input matInput [(ngModel)]="status">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Assigned To</mat-label>
+    <input matInput [(ngModel)]="assignedto">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Discard</button>
+  <button mat-button [mat-dialog-close]="data" (click)="storeData()" cdkFocusInitial>Save</button>
+</div>
